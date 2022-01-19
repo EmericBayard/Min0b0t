@@ -13,4 +13,10 @@
 
 ### How to run this project
 
-###
+### Command
+
+python3 -W ignore
+
+### Tips
+
+Make sure to create __init__.py inside each folder you create.

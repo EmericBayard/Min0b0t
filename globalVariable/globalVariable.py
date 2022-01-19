@@ -1,0 +1,1 @@
+top_right_button = './assets/top_right_button.png'
