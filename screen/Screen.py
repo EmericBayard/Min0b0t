@@ -21,19 +21,39 @@ class Screen:
         s = pya.screenshot()
 
     """Print width and height of screen"""
+    @classmethod
     def print(self) -> None:
         print('Width:', self.width)
         print('Height:', self.height)
     
     """Refresh resolution and screen"""
+    @classmethod
     def refresh(self) -> None:
         self.s = pya.screenshot()
         self.width, self.height = pya.size()
     
     """Return true if the screen is Dofus window"""
-    """ WIP """
+    @classmethod
     def isDofus(self) -> bool:
         img = Image.open(glo.top_right_button) 
         return not isinstance(pya.locate(img, self.s, grayscale=False), type(None))
+
+    """Return position of @par"""
+    @classmethod
+    def getCoordinate(self, path: str) -> tuple:
+        img = Image.open(path) 
+        return pya.center(pya.locate(img, self.s, grayscale=False, confidence=0.9))
+    
+    """Click at coordinate and Return void """
+    @staticmethod
+    def clickAtCoordinate( x: int, y: int) -> None:
+        pya.click(x, y)
+    
+    
+
+    
+
+
+
     
 

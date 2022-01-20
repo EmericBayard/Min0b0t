@@ -19,4 +19,6 @@ python3 -W ignore
 
 ### Tips
 
+Install sorcery on your visual studio code
+
 Make sure to create __init__.py inside each folder you create.
