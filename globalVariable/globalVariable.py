@@ -1,1 +1,1 @@
-top_right_button = './assets/top_right_button.png'
+top_right_button = './buttons/assets/top_right_button.png'
