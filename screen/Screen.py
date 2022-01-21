@@ -47,7 +47,14 @@ class Screen:
     """Click at coordinate and Return void """
     @staticmethod
     def clickAtCoordinate( x: int, y: int) -> None:
-        pya.click(x, y)
+        pya.click(x/2, y/2)
+    """Click to close a window and Return void """
+    @staticmethod
+    def closeAWindow(self, path: str) -> None:
+        x, y = self.getCoordinate(glo.button_close_window)
+        Screen.clickAtCoordinate(x, y)
+
+
     
     
 
